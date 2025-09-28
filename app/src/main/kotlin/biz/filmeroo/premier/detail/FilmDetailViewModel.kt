@@ -19,7 +19,7 @@ internal class FilmDetailViewModel @Inject constructor(
     filmRepository: FilmRepository
 ) : BaseViewModel() {
 
-    private val filmId: Long = savedStateHandle.get<Long>(FILM_ID)!!
+    private val filmId: Long = savedStateHandle.get<Long>(FILM_ID) ?: 0L
     private val _filmDetailState = MutableLiveData<FilmState<ApiFilm>>()
     private val _filmSimilarState = MutableLiveData<FilmState<SimilarMovieResponse>>()
 

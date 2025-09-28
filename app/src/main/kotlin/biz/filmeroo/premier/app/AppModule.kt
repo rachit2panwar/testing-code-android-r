@@ -5,7 +5,6 @@ import android.content.res.Resources
 import biz.filmeroo.premier.R
 import biz.filmeroo.premier.api.FilmService
 import com.google.gson.Gson
-import com.squareup.picasso.Picasso
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -57,8 +56,4 @@ object AppModule {
             )
         }
     }
-
-    @Provides
-    @Singleton
-    fun providePicasso(): Picasso = Picasso.get()
 }
